@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="webpages.css"/>
+    <title>How A Web Page Is Loaded And Displayed</title>
+    
+</head>
+<body>
+    <h1 class="heading firsthead">HOW A WEB PAGE IS LOADED AND DISPLAYED</h1>
+    <p class="first">I will begin by defining some terms I will use frequently in this essay.<br> 
+        <b>http</b> is the primary protocol of the web, which is used by browsers and serves<br>
+        to transfer content through the web.<br>
+    
+        The <b>HTML</b> is a simple programming language based on tags that provide instructions<br>
+        for creating web pages such as where to place an image or which text to be made large or <br>
+        which one to be put in italics. Web browsers could understand and interpret HTML and display <br>
+        the web page to the viewer.</p>
+
+    <h3 class="heading">The steps of a Webpage being displayed</h5>
+    <ol>
+        <li>A <b>request</b> is made when the link is clicked</li>
+        <li>The page and it's resources are downloaded (<b>Respond</b>)</li>
+        <li>The web browser uses the page resources to <b>build</b> the page</li>
+        <li>The page is then <b>rendered</b> (displayed) to the user</li>
+    </ol>
+
+    <h3 class="heading">REQUEST</h3>
+    <p>The computer that handles these tasks are called DNS servers, what they do basically is translating<br>
+    domain names which people are able to recall to a long sequence of identification names called IP<br>
+    addresses that computers can interprete. The browsers are only able to connect to the websites that <br>
+    you'd like to visit once they receive these long number sequences from the name servers. <br></p>
+    <p> The browser uses the received number to establish a connection with the web server of the site you <br>
+    wish to visit. As there are different communication protocols on the web, your computer and the<br>
+    server has to agree on the "language" that will be used. <br></p>
+    <p>Once the connection is established, the client sends a request to the server. This message contains<br>
+    the address you are trying to reach and specifies what kind of data is needed to display the contents<br>
+    of the webpage. The period when a webpage is requested is known as navigation start.</p>
+
+    <h3 class="heading">RESPONSE</h3>
+    <p>The response of the web page will differ depending on whether the server program was able to find<br>
+    the requested web page or webfile. Assuming the server was able to locate the web page, it sends the <br>
+    HTML file to the web browser. The server sends the data which is needed to display the contents of the <br>
+    web page back to the browser. This ends the communication between the browser and the web server.<br>
+    The client confirms this by sending a FIN package back to the server. A FIN package is sent from <br>
+    server or client to terminate a connection after successful transfer of data/establishment of TCP 3-way handshake.</p>
+    <p>Once the browser has recieved the document(HTML file), it reads it. When a computer reads a file <br>
+    looking for something, it is called "parsing". The web browser looks at the entire HTML document and <br>
+    looks for any CSS, JAVASCRIPT and images that are referenced by the page. If resources are found in the<br>
+    HTML the web browser then requests each of those resource files from the webserver and will be downloaded<br>
+    by the browser.</p>
+
+    <h3 class="heading">BUILD</h3>
+    <p>Once the web browser has the required resources, it can start building the page. The web browser builds<br>
+    the page by combining the information found in the document (the original HTML file) and the information<br>
+    found in the resources. <br>
+    There are basically three steps that the browser takes to build a page: 
+    <ul>
+        <li>Build the DOM</li>
+        <li>Build the CSSOM</li>
+        <li>Build the render tree</li>
+    </ul></p>
+    <h4 class="heading">Building the DOM</h4>
+    <p>DOM stands for Document Object Map. It is basically a map of where things are displayed on a page<br>
+    according to HTML. The DOM represents what the HTML is saying by mapping out the page in a relational manner</p>
+    
+    <h4 class="heading">Building the CSSOM</h4>
+    <p>CSSOM stands for CSS object map. It is basically a map of what styles should be applied to different <br>
+    parts of the page according to the CSS. The CSSOM maps out the way things should be presented<br>
+    using styles.</p>
+
+    <h4 class="heading">Building the Render Tree</h4>
+    <p>The render tree essentially takes the DOM and CSSDOM and combines them to create a full map of how<br>
+    the page will be laid out and presented.</p>
+
+
+    <h3 class="heading">THE RENDER</h3>
+    <ul>
+        <li><b>Layout</b><br>
+        This is where the browser determines how big a screen is and how that will affect <br>
+        the way the page is displayed.</li>
+        <li><b>Paint</b><br>
+        Where the browser converts each node in the render tree to actual<br>
+        pixels on the screen.</li>
+    </ul>
+</body>
+</html>

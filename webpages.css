@@ -22,8 +22,10 @@ body {
   
   @keyframes slide {
     0%   {color:#4B1B31; font-size: 40px;}
-    25%  {color:#9C3040; font-size: 50px;}
+    20%  {color:#782B4E; font-size: 45px;}
+    35%  {color:#A53B6B; font-size: 50px;}
     50%  {color:#9c5c50; font-size: 55px;}
-    75%  {color:#9C3040; font-size: 50px;}
+    65%  {color:#A53B6B; font-size: 50px;}
+    80%  {color:#782B4E; font-size: 45px;}
     100% {color:#4B1B31; font-size: 40px;}
   }
